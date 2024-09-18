@@ -9,6 +9,31 @@ if st.checkbox("Show"):
     st.subheader("Why DrAni List?")
     st.text('A free website/tool to track your Animes, Series, Manga and Dramas in one website!')
     st.markdown('test')
+import streamlit as st
+
+# Set the page title
+st.title("My Streamlit App")
+
+# Inject CSS to set the background image
+background_image_url = "https://shiv.tixte.co/wallpaperflare.com_wallpaper_(2).jpg"
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url('{background_image_url}');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;  /* Full height */
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Your app content goes here
+st.header("Welcome to My App!")
+st.write("This is an example of a Streamlit app with a custom background.")
 
 import pandas as pd
 import jinja2
