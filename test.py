@@ -34,7 +34,7 @@ anidictmodel = {'S.no':[], 'Title':[],'Status':[],
 #Actual list
 
 #all_ani_list = pd.read_csv('C:/Users/shiva/Desktop/memes/anilist.csv', sep= '*')
-all_ani_list = pd.DataFrame(anidictmodel1)
+all_ani_list = pd.DataFrame(anidictmodel)
 all_ani_list.set_index('S.no', inplace = True)
 all_ani_list.style.set_properties(**{"font-size":"1.5rem",
                                   'color':'Blue',
