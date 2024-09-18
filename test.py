@@ -43,7 +43,7 @@ all_ani_list.style.set_properties(**{"font-size":"1.5rem",
 
 #Main menu
 
-print('''
+st.text('''
       -------------------------------------------------------------------
                                         MENU
       -------------------------------------------------------------------
@@ -52,7 +52,7 @@ print('''
       3. Timeline
       4. Statistics
       5. Profile''')
-cmd = input('Choose: ')
+cmd = st.text_input('Choose: ')
 
 
 
@@ -125,14 +125,14 @@ for [row,rowseries] in all_ani_list.iterrows():
 #unfiltered
 
 if cmd == ('Show List' or '1'):
-    print('''          1. All
+    st.text('''          1. All
           2. Currently Watching
           3. Completed
           4. On-hold
           5. Dropped
           6. Plan to Watch
           for filtering options, type \'filter\' as a prefix ''')
-    key = input('Choose list: ')
+    key = st.text_input('Choose list: ')
     dick1 = {'All': all_ani_list,
             'Currently Watching': wat_list, 
             'Completed': owari_list, 
@@ -140,11 +140,11 @@ if cmd == ('Show List' or '1'):
             'Dropped': drop_list, 
             'Plan to Watch': ptw_list}
     if key in dick1:
-        print(dick1[key])
+        st.text(dick1[key])
 
     #filtered
     if 'filter' in key:
-        print('Ayaan: Hold my Keyboard!')
+        st.text('Ayaan: Hold my Keyboard!')
 ''' AYAAN'S JOB '''
 
 #Error Checker
@@ -189,7 +189,7 @@ if cmd == ('Errors' or '4'):
                     ''' + '(Genre)' + str(row))
             garguement = True
 if sarguement == True:
-    print(stxt)
+    st.text(stxt)
 if garguement == True:
-    print(gtxt)
+    st.text(gtxt)
 
