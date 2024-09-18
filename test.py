@@ -52,7 +52,7 @@ st.text('''
       3. Timeline
       4. Statistics
       5. Profile''')
-cmd = st.text_input('Choose: ')
+cmd = st.radio('Choose: ', ("Show List", "Errors", 'Timeline', 'Statistics', 'Profile')
 
 
 
