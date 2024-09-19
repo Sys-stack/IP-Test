@@ -17,20 +17,17 @@ if st.checkbox("Show"):
 
 # Inject CSS to set the background image
 background_image_url = "https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg"
-st.markdown(
-    f"""
-    <style>
-    .stApp {{
-        background-image: url('{background_image_url}');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100vh;  /* Full height */
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Your app content goes here
 st.header("Welcome to My App!")
