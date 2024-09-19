@@ -16,7 +16,7 @@ if st.checkbox("Show"):
     st.markdown('test')
 
 # Inject CSS to set the background image
-background_image_url = "https://shiv.tixte.co/wallpaperflare.com_wallpaper_(2).jpg"
+background_image_url = "https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg"
 st.markdown(
     f"""
     <style>
