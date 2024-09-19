@@ -3,6 +3,7 @@ import requests
 from io import BytesIO
 from PIL import Image
 
+st.set_page_config(page_Title = "DrAni List")
 if st.checkbox("Show"):
     st.title("DrAni List")
     st.header("Introduction")
