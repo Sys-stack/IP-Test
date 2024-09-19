@@ -3,7 +3,13 @@ import requests
 from io import BytesIO
 from PIL import Image
 
-st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg", caption="This is a caption", use_column_width=True)
+import streamlit as st
+
+# Display the image using the raw URL
+st.image("https://raw.githubusercontent.com/Sys-stack/IP-Test/test/japan-background-digital-art.jpg", 
+         caption="This is a caption", 
+         use_column_width=True)
+
 
 st.set_page_config(
     page_title="DrAni List",  # Set the title of the webpage
