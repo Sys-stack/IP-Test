@@ -6,19 +6,24 @@ from PIL import Image
 import streamlit as st
 
 # Display the image using the raw URL
-st.markdown(
-    """
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
     <style>
-    .reportview-container {
-        background: url("https://images.app.goo.gl/LFCobouKtT7oZ7Qv7")
-    }
-   .sidebar .sidebar-content {
-        background: url("https://images.app.goo.gl/LFCobouKtT7oZ7Qv7")
+    body {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
     }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+set_background('./src/static/img/background.png')
 st.set_page_config(
     page_title="DrAni List",  # Set the title of the webpage
     page_icon="🖥️",                # Set the icon of the webpage (can be emoji or path to an image)
