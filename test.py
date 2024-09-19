@@ -6,7 +6,7 @@ from PIL import Image
 import streamlit as st
 
 # Display the image using the raw URL
-
+st.image("https://github.com/Sys-stack/IP-Test/blob/09a0cab3d8f761c4c3151aa7f0fd3e433350da03/japan-background-digital-art.jpg")
 st.set_page_config(
     page_title="DrAni List",  # Set the title of the webpage
     page_icon="🖥️",                # Set the icon of the webpage (can be emoji or path to an image)
