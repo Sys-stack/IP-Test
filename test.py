@@ -6,7 +6,7 @@ from PIL import Image
 import streamlit as st
 
 # Display the image using the raw URL
-set_background('./src/static/img/background.png')
+
 st.set_page_config(
     page_title="DrAni List",  # Set the title of the webpage
     page_icon="🖥️",                # Set the icon of the webpage (can be emoji or path to an image)
