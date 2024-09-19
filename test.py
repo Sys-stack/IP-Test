@@ -3,6 +3,8 @@ import requests
 from io import BytesIO
 from PIL import Image
 
+st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg", caption="This is a caption", use_column_width=True)
+
 st.set_page_config(
     page_title="DrAni List",  # Set the title of the webpage
     page_icon="🖥️",                # Set the icon of the webpage (can be emoji or path to an image)
