@@ -6,23 +6,6 @@ from PIL import Image
 import streamlit as st
 
 # Display the image using the raw URL
-def get_base64(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_background(png_file):
-    bin_str = get_base64(png_file)
-    page_bg_img = '''
-    <style>
-    body {
-    background-image: url("data:image/png;base64,%s");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
 set_background('./src/static/img/background.png')
 st.set_page_config(
     page_title="DrAni List",  # Set the title of the webpage
@@ -36,19 +19,7 @@ if st.checkbox("Show"):
     st.text('A free website/tool to track your Animes, Series, Manga and Dramas in one website!')
     st.markdown('test')
 
-# Inject CSS to set the background image
-background_image_url = "https://raw.githubusercontent.com/Sys-stack/IP-Test/test/japan-background-digital-art.jpg"
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg");
-background-size: cover;
-}
-</style>
-'''
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Your app content goes here
 st.header("Welcome to My App!")
@@ -77,8 +48,8 @@ anidictmodel = {'S.no':[], 'Title':[],'Status':[],
 
 #Actual list
 
-#all_ani_list = pd.read_csv('C:/Users/shiva/Desktop/memes/anilist.csv', sep= '*')
-all_ani_list = pd.DataFrame(anidictmodel)
+all_ani_list = pd.read_csv('https://raw.githubusercontent.com/Sys-stack/IP-Test/test/anilist.csv', sep= '*')
+#all_ani_list = pd.DataFrame(anidictmodel)
 all_ani_list.set_index('S.no', inplace = True)
 all_ani_list.style.set_properties(**{"font-size":"1.5rem",
                                   'color':'Blue',
