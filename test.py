@@ -6,11 +6,19 @@ from PIL import Image
 import streamlit as st
 
 # Display the image using the raw URL
-st.image("https://raw.githubusercontent.com/Sys-stack/IP-Test/test/japan-background-digital-art.jpg", 
-         caption="This is a caption", 
-         use_column_width=True)
-
-
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://images.app.goo.gl/LFCobouKtT7oZ7Qv7")
+    }
+   .sidebar .sidebar-content {
+        background: url("https://images.app.goo.gl/LFCobouKtT7oZ7Qv7")
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.set_page_config(
     page_title="DrAni List",  # Set the title of the webpage
     page_icon="🖥️",                # Set the icon of the webpage (can be emoji or path to an image)
