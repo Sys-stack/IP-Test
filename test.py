@@ -12,20 +12,18 @@ if st.checkbox("Show"):
     st.subheader("Why DrAni List?")
     st.text('A free website/tool to track your Animes, Series, Manga and Dramas in one website!')
     st.markdown('test')
+
+st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
 st.markdown(
     """
-    <style>
-    .reportview-container {
-        background: url("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
-    }
-   .sidebar .sidebar-content {
-        background: url("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
-    }
-    </style>
+    <div style="position: relative; text-align: center; color: white;">
+        <h2 style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%);">
+            omg yoo
+        </h2>
+    </div>
     """,
     unsafe_allow_html=True
 )
-st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
 import jinja2
 
 #def command for one list in another
