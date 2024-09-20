@@ -3,7 +3,7 @@ import requests
 from io import BytesIO
 from PIL import Image
 
-import streamlit as st
+#https://raw.githubusercontent.com/Sys-stack/IP-Test/test/image_loader.py
 
 # Display the image using the raw URL
 
@@ -24,7 +24,9 @@ if st.checkbox("Show"):
 # Your app content goes here
 st.header("Welcome to My App!")
 st.write("This is an example of a Streamlit app with a custom background.")
+from https://raw.githubusercontent.com/Sys-stack/IP-Test/test/image_loader.py import render_image
 
+render_image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
 import pandas as pd
 import jinja2
 
