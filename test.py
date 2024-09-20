@@ -13,7 +13,7 @@ if st.checkbox("Show"):
     st.subheader("Why DrAni List?")
     st.text('A free website/tool to track your Animes, Series, Manga and Dramas in one website!')
     st.markdown('test')
-def scale_img(image_path,x_axis,y_axis)
+def scale_img(image_path,x_axis,y_axis):
   img = Image.open(image_path)
   resized_image = image.resize((x_axis,y_axis))
   return resized_image
