@@ -19,16 +19,11 @@ if st.checkbox("Show"):
     st.text('A free website/tool to track your Animes, Series, Manga and Dramas in one website!')
     st.markdown('test')
 
-
-
-# Your app content goes here
-st.header("Welcome to My App!")
-st.write("This is an example of a Streamlit app with a custom background.")
 import base64
 
 def render_image(filepath: str):
    """
-   filepath: "https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true"
+   filepath: 
    """
    mime_type = filepath.split('.')[-1:][0].lower()
    with open(filepath, "rb") as f:
