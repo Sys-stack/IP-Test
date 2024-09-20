@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from PIL import Image
 st.set_page_config(
     page_title="DrAni List",  # Set the title of the webpage
     page_icon="🖥️",                # Set the icon of the webpage (can be emoji or path to an image)
