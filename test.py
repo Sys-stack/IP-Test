@@ -6,6 +6,7 @@ st.set_page_config(
     page_icon="🖥️",                # Set the icon of the webpage (can be emoji or path to an image)
     layout="wide",                  # Set the layout (wide or centered)
 )
+
 if st.checkbox("Show"):
     st.title("DrAni List")
     st.header("Introduction")
@@ -55,7 +56,7 @@ all_ani_list.style.set_properties(**{"font-size":"1.5rem",
                                   'Background-color':'Black'})
 
 #Main menu
-
+st.table(pd.DataFrame([st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")])
 st.text('''
       -------------------------------------------------------------------
                                         MENU
