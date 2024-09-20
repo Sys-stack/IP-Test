@@ -24,7 +24,18 @@ if st.checkbox("Show"):
 # Your app content goes here
 st.header("Welcome to My App!")
 st.write("This is an example of a Streamlit app with a custom background.")
-from image_loader import render_image
+import base64
+
+def render_image(filepath: str):
+   """
+   filepath: "https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true"
+   """
+   mime_type = filepath.split('.')[-1:][0].lower()
+   with open(filepath, "rb") as f:
+   content_bytes = f.read()
+   content_b64encoded = base64.b64encode(content_bytes).decode()
+   image_string = f'data:image/{mime_type};base64,{content_b64encoded}'
+   st.image(image_string)
 
 render_image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
 import pandas as pd
