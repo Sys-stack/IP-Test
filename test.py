@@ -21,18 +21,23 @@ if st.checkbox("Show"):
 
 import base64
 
-def render_image(filepath: str):
-   """
-   filepath: 
-   """
-   mime_type = filepath.split('.')[-1:][0].lower()
-   with open(filepath, "rb") as f:
-       content_bytes = f.read()
-       content_b64encoded = base64.b64encode(content_bytes).decode()
-       image_string = f'data:image/{mime_type};base64,{content_b64encoded}'
-       st.image(image_string)
+#"https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
 
-render_image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
+# Streamlit app
+st.title("Image Loader App")
+
+# Upload an image file
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png", "gif"])
+
+if uploaded_file is not None:
+    # Save the uploaded file temporarily
+    filepath = f"temp/{uploaded_file.name}"
+    with open(filepath, "wb") as f:
+        f.write(uploaded_file.getbuffer())
+
+    # Render the image using the function
+    render_image(filepath)
+
 import pandas as pd
 import jinja2
 
