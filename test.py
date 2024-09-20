@@ -17,16 +17,7 @@ st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digita
 st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true",
         caption = 'omg works',
         use_column_width = '300')
-st.markdown(
-    """
-    <div style="position: relative; text-align: center; color: white;">
-        <h2 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-            omg yoo
-        </h2>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+
 import jinja2
 
 #def command for one list in another
