@@ -12,6 +12,19 @@ if st.checkbox("Show"):
     st.subheader("Why DrAni List?")
     st.text('A free website/tool to track your Animes, Series, Manga and Dramas in one website!')
     st.markdown('test')
+    st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url('https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
 import jinja2
 
