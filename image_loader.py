@@ -3,7 +3,7 @@ import base64
 
 def render_image(filepath: str):
    """
-   filepath: path to the image. Must have a valid file extension.
+   filepath: https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true
    """
    mime_type = filepath.split('.')[-1:][0].lower()
    with open(filepath, "rb") as f:
