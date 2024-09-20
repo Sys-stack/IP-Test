@@ -12,7 +12,7 @@ if st.checkbox("Show"):
     st.subheader("Why DrAni List?")
     st.text('A free website/tool to track your Animes, Series, Manga and Dramas in one website!')
     st.markdown('test')
-    st.markdown(
+st.markdown(
     """
     <style>
     .reportview-container {
