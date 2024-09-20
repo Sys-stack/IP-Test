@@ -18,7 +18,7 @@ st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digita
 st.markdown(
     """
     <div style="position: relative; text-align: center; color: white;">
-        <h2 style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%);">
+        <h2 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             omg yoo
         </h2>
     </div>
@@ -56,7 +56,7 @@ all_ani_list.style.set_properties(**{"font-size":"1.5rem",
                                   'Background-color':'Black'})
 
 #Main menu
-st.table(pd.DataFrame([st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")])
+
 st.text('''
       -------------------------------------------------------------------
                                         MENU
