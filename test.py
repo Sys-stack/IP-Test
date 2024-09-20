@@ -1,12 +1,6 @@
 import streamlit as st
-import requests
-from io import BytesIO
-from PIL import Image
-
-#https://raw.githubusercontent.com/Sys-stack/IP-Test/test/image_loader.py
-
-# Display the image using the raw URL
-
+import pandas as pd
+import numpy as np
 st.set_page_config(
     page_title="DrAni List",  # Set the title of the webpage
     page_icon="🖥️",                # Set the icon of the webpage (can be emoji or path to an image)
@@ -18,27 +12,7 @@ if st.checkbox("Show"):
     st.subheader("Why DrAni List?")
     st.text('A free website/tool to track your Animes, Series, Manga and Dramas in one website!')
     st.markdown('test')
-
-import base64
-
-#"https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
-
-# Streamlit app
-st.title("Image Loader App")
-
-# Upload an image file
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png", "gif"])
-
-if uploaded_file is not None:
-    # Save the uploaded file temporarily
-    filepath = f"temp/{uploaded_file.name}"
-    with open(filepath, "wb") as f:
-        f.write(uploaded_file.getbuffer())
-
-    # Render the image using the function
-    render_image(filepath)
-
-import pandas as pd
+st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
 import jinja2
 
 #def command for one list in another
