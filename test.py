@@ -153,7 +153,7 @@ if cmd == ('Show List' or '1'):
             'Dropped': drop_list, 
             'Plan to Watch': ptw_list}
     if key in dick1:
-        st.text(dick1[key])
+        st.dataframe(dick1[key])
 
     #filtered
     if 'filter' in key:
