@@ -13,8 +13,10 @@ if st.checkbox("Show"):
     st.subheader("Why DrAni List?")
     st.text('A free website/tool to track your Animes, Series, Manga and Dramas in one website!')
     st.markdown('test')
-
 st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
+st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true",
+        caption = 'omg works',
+        use_column_width = '300')
 st.markdown(
     """
     <div style="position: relative; text-align: center; color: white;">
