@@ -16,10 +16,10 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background: url('https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        background: url("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
+    }
+   .sidebar .sidebar-content {
+        background: url("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
     }
     </style>
     """,
