@@ -13,10 +13,15 @@ if st.checkbox("Show"):
     st.subheader("Why DrAni List?")
     st.text('A free website/tool to track your Animes, Series, Manga and Dramas in one website!')
     st.markdown('test')
+def scale_img(image_path,x_axis,y_axis)
+  img = Image.open(image_path)
+  resized_image = image.resize((x_axis,y_axis))
+  return resized_image
+  
 st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
+st.image(scale_img("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true",300,40))
 st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true",
-        caption = 'omg works',
-        use_column_width = '300')
+        caption = 'omg works',)
 
 import jinja2
 
