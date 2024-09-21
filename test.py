@@ -16,7 +16,7 @@ if st.checkbox("Show"):
     st.markdown('test')
 def scale_img(image_path,x_axis,y_axis):
   img = Image.open(image_path)
-  resized_image = image.resize((x_axis,y_axis))
+  resized_image = img.resize((x_axis,y_axis))
   return resized_image
   
 st.image("https://github.com/Sys-stack/IP-Test/blob/test/japan-background-digital-art.jpg?raw=true")
