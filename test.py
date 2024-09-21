@@ -18,9 +18,6 @@ st.set_page_config(
   page_icon = "",
   layout = 'wide',
   initial_sidebar_state = 'collapsed',
-  theme = {'primaryColor':'#FF4B4B',
-           'backgroundColor':'#FFFFFF',
-           'textColor':'#000000'
-          })
+  )
 st.image("https://raw.githubusercontent.com/Sys-stack/IP-Test/test/japan-background-digital-art.jpg")
 st.image(scale_img("https://raw.githubusercontent.com/Sys-stack/IP-Test/test/japan-background-digital-art.jpg", 2000,40))
