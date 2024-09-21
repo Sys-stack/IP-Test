@@ -1,6 +1,7 @@
+import requests
 from io import BytesIO as by
 from PIL import Image
-import requests
+
 #def image
 def scale_img(image_path,x_axis,y_axis):
   res = requests.get(image_path)
@@ -10,8 +11,16 @@ def scale_img(image_path,x_axis,y_axis):
 
 import streamlit as st
 
-st.set_page_config(page_title = 'omg')
-#C:/Users/shiva/Downloads/japanese-background-digital-art.jpg
 
+#C:/Users/shiva/Downloads/japanese-background-digital-art.jpg
+st.set_page_config(
+  page_title = "DrAniList",
+  page_icon = "",
+  layout = 'wide',
+  initial_sidebar_state = 'collapsed',
+  theme = {'primaryColor':'#FF4B4B',
+           'backgroundColor':'#FFFFFF',
+           'textColor':'#000000'
+          })
 st.image("https://raw.githubusercontent.com/Sys-stack/IP-Test/test/japan-background-digital-art.jpg")
-st.image(scale_img("https://raw.githubusercontent.com/Sys-stack/IP-Test/test/japan-background-digital-art.jpg", 800,40))
+st.image(scale_img("https://raw.githubusercontent.com/Sys-stack/IP-Test/test/japan-background-digital-art.jpg", 2000,40))
