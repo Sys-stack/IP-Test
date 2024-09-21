@@ -4,7 +4,7 @@ from PIL import Image
 #def image
 def scale_img(image_path,x_axis,y_axis):
   res = requests.get(image_path)
-  img = Image.open(by(res.content)
+  img = Image.open(by(res.content))
   resized_image = img.resize((x_axis,y_axis))
   return resized_image
 
