@@ -12,5 +12,5 @@ import streamlit as st
 st.set_page_config(page_title = 'omg')
 #C:/Users/shiva/Downloads/japanese-background-digital-art.jpg
 
-st.image("C:/Users/shiva/Downloads/japan-background-digital-art.jpg")
-st.image(scale_img("C:/Users/shiva/Downloads/japan-background-digital-art.jpg", 800,40))
+st.image("https://raw.githubusercontent.com/Sys-stack/IP-Test/test/japan-background-digital-art.jpg")
+st.image(scale_img("https://raw.githubusercontent.com/Sys-stack/IP-Test/test/japan-background-digital-art.jpg", 800,40))
