@@ -12,7 +12,7 @@ def scale_img(image_path,x_axis,y_axis):
 import streamlit as st
 
 
-#C:/Users/shiva/Downloads/japanese-background-digital-art.jpg
+
 st.set_page_config(
   page_title = "DrAniList",
   page_icon = "",
