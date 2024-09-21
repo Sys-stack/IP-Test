@@ -1,6 +1,6 @@
 from io import BytesIO as by
 from PIL import Image
-
+import requests
 #def image
 def scale_img(image_path,x_axis,y_axis):
   res = requests.get(image_path)
