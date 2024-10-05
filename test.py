@@ -1,39 +1,42 @@
 import streamlit as st
-import requests
+import pandas as pd
 
-# Title for the Streamlit app
-st.title("Anime Information Fetcher")
+# Example DataFrame with image URLs
+data = {
+    'Anime': ['Naruto', 'One Piece', 'Attack on Titan'],
+    'Image URL': [
+        'https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg',
+        'https://upload.wikimedia.org/wikipedia/en/5/50/OnePieceCover01.jpg',
+        'https://upload.wikimedia.org/wikipedia/en/7/79/Shingeki_no_Kyojin_Volume_1.jpg'
+    ]
+}
 
-# Create a text input field in Streamlit to get anime name from the user
-anime_name = st.text_input("Enter the name of the anime:", "")
+df = pd.DataFrame(data)
 
-# If an anime name is provided, proceed to fetch the data
-if anime_name:
-    # Jikan API URL to search for the anime
-    url = f"https://api.jikan.moe/v4/anime?q={anime_name}&limit=1"
-    
-    # Make a GET request to the Jikan API
-    response = requests.get(url)
+# Create HTML table with embedded images
+html_table = """
+<table>
+    <thead>
+        <tr>
+            <th>Anime</th>
+            <th>Cover</th>
+        </tr>
+    </thead>
+    <tbody>
+"""
+# Add each row with an image
+for index, row in df.iterrows():
+    html_table += f"""
+    <tr>
+        <td>{row['Anime']}</td>
+        <td><img src="{row['Image URL']}" width="100"></td>
+    </tr>
+    """
 
-    # Check if the request was successful
-    if response.status_code == 200:
-        data = response.json()
+html_table += """
+    </tbody>
+</table>
+"""
 
-        # Extract the first anime's data (if it exists)
-        if data['data']:
-            anime_info = data['data'][0]
-
-            # Display the anime information
-            st.subheader(anime_info['title'])
-            st.image(anime_info['images']['jpg']['large_image_url'])
-            st.write(f"Type: {anime_info['type']}")
-            st.write(f"Episodes: {anime_info['episodes']}")
-            st.write(f"Status: {anime_info['status']}")
-            st.write(f"Aired: {anime_info['aired']['string']}")
-            st.write(f"Score: {anime_info['score']}")
-            st.write(f"Synopsis: {anime_info['synopsis']}")
-        else:
-            st.error("Anime not found! Please check the spelling or try another anime.")
-    else:
-        st.error(f"Failed to fetch data. Error code: {response.status_code}")
-
+# Render the table with images
+st.markdown(html_table, unsafe_allow_html=True)
